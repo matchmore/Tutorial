@@ -47,11 +47,15 @@ pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => 
 
 * Then, enter the following command to install `ALPS SDK` and `ALPS` in your project :
 
-  pod install
+      pod install
 
 * Open the workspace.
 
+![alt text](https://github.com/matchmore/Tutorial/blob/master/readmeImage/workspace.png "workspace")
+
 * Check that the pods are correctly installed. 
+
+![Check pod installation](https://github.com/matchmore/Tutorial/blob/master/readmeImage/installedPod.png "pod installed")
 
 We are ready to use `ALPS SDK`.
 
