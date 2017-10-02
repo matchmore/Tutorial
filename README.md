@@ -55,7 +55,7 @@ pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => 
 
 * Check that the pods are correctly installed. 
 
-![Check pod installation](https://github.com/matchmore/Tutorial/blob/master/readmeImage/installedPod.png "pod installed")
+![alt text](https://github.com/matchmore/Tutorial/blob/master/readmeImage/installedPod.png "pod installed")
 
 We are ready to use `ALPS SDK`.
 
@@ -63,6 +63,7 @@ We are ready to use `ALPS SDK`.
 
 ### Setting up the SDK
 Before setting up Alps SDK, we need to add `Privacy - Location Always Usage Description` in `info.plist` file to allow the use of Core Location kit in the project. Add a description `"Need location usage for Alps SDK"`. See image below.
+![alt text](https://github.com/matchmore/Tutorial/blob/master/readmeImage/info-plist.png "info-plist")
 
 All the functions you need are grouped in the AlpsManager class.
 
@@ -84,6 +85,7 @@ ALPS SDK is built upon the CoreLocation package, if you want to have a reference
 
 Import CoreLocation in your AppDelegate. Then initiate a variable with name `locationManager` of class **CLLocationManager**.
 In the function `didFinishLaunchingWithOptions`, write the following code :
+
 ```swift
 locationManager = CLLocationManager.init()
 alps = AlpsManager.init(apiKey: APIKEY, clLocationManager: locationManager)
