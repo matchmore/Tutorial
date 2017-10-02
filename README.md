@@ -4,27 +4,33 @@ Welcome ! In this tutorial, we will demonstrate how to start using our `Advanced
 
 ## What we will go through
 
-Install ALPS and ALPS SDK in the Xcode project via CocoaPods
-Use the ALPS SDK
-Create a user
-Create a mobile device
-Create a publication
-Create a subscription
-Get the matches
+1. Install `ALPS` and `ALPS SDK` in the Xcode project via CocoaPods
+2. Use the `ALPS SDK`
+⋅⋅* Create a `user`
+⋅⋅* Create a `mobile device`
+⋅⋅* Create a `publication`
+⋅⋅* Create a `subscription`
+⋅⋅* Get the `matches`
 
 ### Install ALPS and ALPS SDK in the Xcode project via CocoaPods
 
-We assume that you already have CocoaPods installed on your laptop. If not, please refer to this link https://cocoapods.org/ and install it.
-Use cd command in the terminal to open the Xcode project repository in which you want to use ALPS SDK.
-cd /Users/useraccount/Desktop/Tutorial
-Note : In this tutorial, the project is in the Desktop and the folder name is “Tutorial”.
+We assume that you already have CocoaPods installed on your laptop. If not, please refer to this link [https://cocoapods.org/](https://cocoapods.org/) and install it.
+
+Use cd command in the terminal to open the Xcode project repository in which you want to use `ALPS SDK`.
+
+  cd /Users/userAccount/Desktop/Tutorial
+
+**Note** : In this tutorial, the project is in the Desktop and the folder name is “Tutorial”.
 In the terminal, you should be located in the repository of your project. You need to enter this command that will initiate a pod.
-pod init
+
+  pod init
+  
 Check that it was correctly initiated by opening your repository.
 
 Open the recently created Podfile with a text editor. We will use Atom.
 
-Copy-paste the following lines into your podfile under # Pods for your_project_name. See image below for an example.
+Copy-paste the following lines into your podfile under `# Pods for your_project_name`. See image below for an example.
+
   pod 'Alps', :git => 'https://github.com/MatchMore/alps-ios-api.git', :tag => ‘0.4.0'
   pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => ‘0.4.0'
 
