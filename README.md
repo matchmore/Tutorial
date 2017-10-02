@@ -41,11 +41,9 @@ Copy-paste the following lines into your podfile under `# Pods for your_project_
 Save your podfile and go back to your terminal.
 Go back to your terminal and make sure you are in your project repository.
 
-Then, enter the following command :
+Then, enter the following command to install `ALPS SDK` and `ALPS` in your project :
 
     pod install
-
-It will install ALPS SDK and ALPS in your project via Cocoapods.
 
 Open the workspace.
 
@@ -58,7 +56,7 @@ We are ready to use `ALPS SDK`.
 ## Use the ALPS SDK
 
 ### Setting up the SDK
-Before setting up Alps SDK, we need to add `Privacy - Location Always Usage Description` in `info.plist` file to allow the use of Core Location kit in the project. Add a description `Need location usage for Alps SDK`. See image below.
+Before setting up Alps SDK, we need to add `Privacy - Location Always Usage Description` in `info.plist` file to allow the use of Core Location kit in the project. Add a description `"Need location usage for Alps SDK"`. See image below.
 
 All the functions you need are grouped in the AlpsManager class.
 
@@ -66,19 +64,19 @@ It would be good to have a look at our SDK, the protocol AlpsSDK regroups all th
 
 ### Initiate an AlpsManager
 
-We advice you to initiate the *AlpsManager* in your `appDelegate`, which will allow you to refer it in all your application.
+We advice you to initiate the **AlpsManager** in your `appDelegate`, which will allow you to refer it in all your application.
 
-*Keep in mind, that you should have only one AlpsManager for the whole project.*
+**Keep in mind, that you should have only one AlpsManager for the whole project.**
 
 Go in the file `AppDelegate`, add `import AlpsSDK`.
 
-Then initiate a variable with name `alps` of class *AlpsManager*. You also need your api-key for your AlpsManager. To get the api-key, please follow the “step-by-step” instructions.
+Then initiate a variable with name `alps` of class **AlpsManager**. You also need your api-key for your AlpsManager. To get the api-key, please follow the “step-by-step” instructions.
 
 Once you have the api-key, declare a constant with name `APIKEY` and value of your api-key.
 
 ALPS SDK is built upon the CoreLocation package, if you want to have a reference to your CLLocationManager, you will need to initiate it by yourself. The following instruction will explain you how to have your own reference to the CLLocationManager, you can skip it if you don’t want to use Core Location package. When skipping this step, AlpsManager will initiate his own CLLocationManager.
 
-Import CoreLocation in your AppDelegate. Then initiate a variable with name `locationManager` of class *CLLocationManager*.
+Import CoreLocation in your AppDelegate. Then initiate a variable with name `locationManager` of class **CLLocationManager**.
 In the function `didFinishLaunchingWithOptions`, write the following code :
 ```swift
 locationManager = CLLocationManager.init()
@@ -97,25 +95,31 @@ Add this line in class ViewController, to get a reference to the application's d
 
 `let appDelegate = UIApplication.shared.delegate as! AppDelegate`
 
-* Use the constant appDelegate to get a reference to *AlpsManager*.
-* Call the function `createUser(username: String, completion : (User?) -> Void)`. Fill the required paramters and you can use the completion to get the returned `User` object created in our cloud service.
+Inside of function `ViewDidLoad()``
+* Use the constant appDelegate to get a reference to **AlpsManager**.
+* Call the function `createUser(username: String, completion : (User?) -> Void)`. Fill the required parameters and you can use the completion to get the returned `User` object created in our cloud service.
 * Use the completion to get the user and print his id.
 
-Hint : Each object in our model has his own *Universal Unique Identifier(UUID)*.
+Hint : Each object in our model has his own **Universal Unique Identifier(UUID)**.
 
 ```swift
-appDelegate.alps.createUser("Alice", completion: {(_ user) in
-           if let u = user {
-               print(u.id)
-             }
-             })
+override func viewDidLoad() {
+        super.viewDidLoad()
+        appDelegate.alps.createUser("Alice", completion: {(_ user) in
+                   if let u = user {
+                       print(u.id)
+                     }
+                     })
+
+// ...
+}
 ```
 
-When you create a user, our SDK automatically store it in an array but only the very first user created is designated to be the *AlpsUser*.
+When you create a user, our SDK automatically store it in an array but only the very first user created is designated to be the **AlpsUser**.
 
 ### Create a mobile device
 
-*Inside the completion of createUser() function*, write the following lines.
+**Inside the completion of createUser() function**, write the following lines.
 
 We want to make sure the user is created before we call the device creation.
 
@@ -126,18 +130,23 @@ We want to make sure the user is created before we call the device creation.
 As it is for the AlpsUser, same goes for AlpsDevice. The first mobile device that you create will be designated to be the AlpsDevice.
 
 ```swift
-appDelegate.alps.createUser("Alice", completion: {(_ user) in
-           if let u = user {
+override func viewDidLoad() {
+        super.viewDidLoad()
+        appDelegate.alps.createUser("Alice", completion: {(_ user) in
+                   if let u = user {
 
-// ...
+        // ...
 
-self.appDelegate.alps.createMobileDevice(name: "Alice's mobile device", platform: "iOS 9.0", deviceToken: "738a5b9c-61c3-4cf7-937d-20fe9b1ae69c", latitude: 0.0, longitude: 0.0, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0, completion: {
-                    (_ mobileDevice) in
-                    if let md = mobileDevice{
-                        print(md.id)
-                      }
-                    })
-// ...
+                  self.appDelegate.alps.createMobileDevice(name: "Alice's mobile device", platform: "iOS 9.0", deviceToken: "738a5b9c-61c3-4cf7-937d-20fe9b1ae69c", latitude: 0.0, longitude: 0.0, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0, completion: {
+                                      (_ mobileDevice) in
+                                      if let md = mobileDevice{
+                                          print(md.id)
+                                        }
+                                      })
+        // ...
+        })
+}
+
 ```
 
 ### Create a publication
