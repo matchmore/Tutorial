@@ -36,7 +36,7 @@ Copy-paste the following lines into your podfile under `# Pods for your_project_
 
 ```
 pod 'Alps', :git => 'https://github.com/MatchMore/alps-ios-api.git', :tag => ‘0.4.0'
-pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => ‘0.4.0'
+pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => ‘0.4.1'
 ```
 
  See image below for an example.
@@ -53,7 +53,8 @@ pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => 
 
 ![alt text](https://github.com/matchmore/Tutorial/blob/master/readmeImage/workspace.png "workspace")
 
-* Check that the pods are correctly installed. 
+* Check that the pods are correctly installed.
+
 
 ![alt text](https://github.com/matchmore/Tutorial/blob/master/readmeImage/installedPod.png "pod installed")
 
@@ -77,7 +78,8 @@ We advice you to initiate the **AlpsManager** in your `appDelegate`, which will 
 
 Go in the file `AppDelegate`, add `import AlpsSDK`.
 
-Then initiate a variable with name `alps` of class **AlpsManager**. You also need your api-key for your AlpsManager. To get the api-key, please follow the “step-by-step” instructions.
+Then initiate a variable with name `alps` of class **AlpsManager**.
+You also need your api-key for your AlpsManager. To get the api-key, please follow the “step-by-step” instructions.
 
 Once you have the api-key, declare a constant with name `APIKEY` and value of your api-key.
 
@@ -162,7 +164,8 @@ override func viewDidLoad() {
 
 In our SDK, there is two createPublication() function available. One uses the AlpsUser and AlpsDevice as the target to create the publication. The other one, you have the option to set for which user and which device you would like to create this publication by providing UUID.
 
-**Inside the completion of createMobileDevice() function**, write the following lines. 
+**Inside the completion of createMobileDevice() function**, write the following lines.
+
 
 * Use the constant appDelegate to get the AlpsManager.
 * Call the function `createPublication(topic : String, range: Double, duration: Double, properties: [String:String], completion: (_ publication?) -> Void)`.
