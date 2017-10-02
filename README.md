@@ -324,6 +324,18 @@ class ViewController: UIViewController {
 }
 ```
 
+## Run Tutorial
+
+Run `Tutorial` and see how our `Alps SDK` Works.
+
+You should be able to see in the log, the printed iDs and that a match was found on our core service.
+
+![alt text](https://github.com/matchmore/Tutorial/blob/master/readmeImage/result.png "result")
+
+Thank you for following this tutorial.
+
+Don't hesitate to contact us for further informations.
+
 ## Documentation
 
 See the [http://dev.matchmore.com/documentation/api](http://dev.matchmore.com/documentation/api) or consult our website for further information [http://dev.matchmore.com/](http://dev.matchmore.com/)
