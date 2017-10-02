@@ -28,7 +28,11 @@ class ViewController: UIViewController {
                         print(md.id)
                         // Create a publication
                         let properties = ["mood": "happy"]
-                        self.appDelegate.alps.createPublication(topic: "tutorial", range: 1000, duration: 300, properties: properties, completion: {
+                        let topic = "tutorial"
+                        let range = 1000.0
+                        let duration = 300.0
+                        
+                        self.appDelegate.alps.createPublication(topic: topic, range: range, duration: duration, properties: properties, completion: {
                             (_ publication) in
                             if let p = publication {
                                 print(p.id)
@@ -37,7 +41,7 @@ class ViewController: UIViewController {
                         
                         // Create a subscription
                         let selector = "mood = 'happy'"
-                        self.appDelegate.alps.createSubscription(topic: "tutorial", selector: selector, range: 1000, duration: 300, completion: {
+                        self.appDelegate.alps.createSubscription(topic: topic, selector: selector, range: range, duration: duration, completion: {
                             (_ subscription) in
                             if let s = subscription {
                                 print(s.id)
@@ -63,8 +67,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    
 }
 

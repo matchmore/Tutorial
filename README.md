@@ -136,7 +136,7 @@ override func viewDidLoad() {
                    if let u = user {
 
         // ...
-
+                  // inside of createUser() completion
                   self.appDelegate.alps.createMobileDevice(name: "Alice's mobile device", platform: "iOS 9.0", deviceToken: "738a5b9c-61c3-4cf7-937d-20fe9b1ae69c", latitude: 0.0, longitude: 0.0, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0, completion: {
                                       (_ mobileDevice) in
                                       if let md = mobileDevice{
@@ -144,6 +144,7 @@ override func viewDidLoad() {
                                         }
                                       })
         // ...
+                    }
         })
 }
 
@@ -151,40 +152,169 @@ override func viewDidLoad() {
 
 ### Create a publication
 
-Inside the completion of createMobileDevice() function, write the following lines. In our SDK, there is two createPublication() function available. One uses the AlpsUser and AlpsDevice as the target to create the publication. The other one, you can set for which user and which device you would like to create this publication by providing UUID.
-Use the constant appDelegate to get the AlpsManager.
-Call the function createPublication(topic : String, range: Double, duration: Double, properties: [String:String], completion: (_ publication?) -> Void). Fill the function with the required parameters.
-Use the completion to get the publication and print his id.
+In our SDK, there is two createPublication() function available. One uses the AlpsUser and AlpsDevice as the target to create the publication. The other one, you have the option to set for which user and which device you would like to create this publication by providing UUID.
+
+**Inside the completion of createMobileDevice() function**, write the following lines. 
+
+* Use the constant appDelegate to get the AlpsManager.
+* Call the function `createPublication(topic : String, range: Double, duration: Double, properties: [String:String], completion: (_ publication?) -> Void)`.
+
+We are based on the publish/subscribe model, you need to match the topic of publisher and subscriber.
+We have also added finer filters by using properties and selector.
+
+Use these parameters for the rest of the tutorial
 
 ```swift
+let properties = ["mood": "happy"]
+let topic = "tutorial"
+let range = 1000.0
+let duration = 300.0
+```
+
+* Use the completion to get the publication and print his id.
+
+```swift
+
+// ...
+// these lines are inside of createMobileDevice() completion
+// Create a publication
+                        let properties = ["mood": "happy"]
+                        let topic = "tutorial"
+                        let range = 1000.0
+                        let duration = 300.0
+                        self.appDelegate.alps.createPublication(topic: topic, range: range, duration: duration, properties: properties, completion: {
+                                                    (_ publication) in
+                                                    if let p = publication {
+                                                        print(p.id)
+                                                    }
+                                                })
+// ...
 ```
 
 ### Create a subscription
 
-Inside the completion of createMobileDevice() function, write the following lines.
 As for the publication, you can create subscription for your main device or for other devices by providing UUID.
-Use the constant appDelegate to get the AlpsManager.
-Call the function createSubscription(topic: String, selector: String, range: Double, duration: Double, completion: (_ subscription?) -> Void). Fill the function with the required parameters.
-Use the completion to get the subscription and print his id.
+
+**Inside the completion of createMobileDevice() function**, write the following lines.
+
+* Use the constant appDelegate to get the AlpsManager.
+* Call the function `createSubscription(topic: String, selector: String, range: Double, duration: Double, completion: (_ subscription?) -> Void)`. Fill the function with the same parameters as for publication.
+
+We will use selector to add one more filter.
+
 ```swift
+let selector = "mood = 'happy'"
+```
+
+* Use the completion to get the subscription and print his id.
+
+```swift
+// ...
+// these lines are inside of createMobileDevice() completion
+// Create a subscription
+                        let selector = "mood = 'happy'"
+                        self.appDelegate.alps.createSubscription(topic: topic, selector: selector, range: range, duration: duration, completion: {
+                            (_ subscription) in
+                            if let s = subscription {
+                                print(s.id)
+                            }
+                        })
+// ...
 ```
 
 ### Get the matches
 
-Inside the completion of createMobileDevice() function, write the following lines.
-Use the constant appDelegate to get the AlpsManager.
-Call the function startMonitoringMatches(), which will start matches monitoring. You might also want to call the function startUpdatingLocation(), this will communicate your GPS location to our cloud service.
-Use the function onMatch() and the completion to get the match and print his id.
+**Inside the completion of createMobileDevice() function**, write the following lines.
+
+* Use the constant appDelegate to get the AlpsManager.
+* Call the function `startUpdatingLocation()`, to update location to our cloud service.
+* Call the function `startMonitoringMatches()`, to start matches monitoring.
+* Use the function `onMatch()`` and the completion to get the match and print his id.
 
 ```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+// ...
+// These lines are inside of the completion of createMobileDevice() function
+// Start updating location of mobile device
+                        self.appDelegate.alps.startUpdatingLocation()
+// Get the matches
+                        self.appDelegate.alps.startMonitoringMatches()
+                        // onMatch function is called every time a match occurs.
+                        self.appDelegate.alps.onMatch(completion: {
+                            (_ match) in
+                            print("-------------- ON MATCH ----------------")
+                            print(match.id)
+                        })
+// ...
 ```
 
-Your final ViewController should look something like below.
+At the end of this section, ViewController should be looking like this :
 
-## Example
+```swift
+import UIKit
+import AlpsSDK
 
-To run the example project, clone the repo, and run \`pod install\` from
-the Example directory first.
+class ViewController: UIViewController {
+
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+
+        // Create a User
+        appDelegate.alps.createUser("Alice", completion: {(_ user) in
+            if let u = user {
+                print(u.id)
+                // Create a MobileDevice
+                self.appDelegate.alps.createMobileDevice(name: "Alice's mobile device", platform: "iOS 9.0", deviceToken: "personnalUUID", latitude: 0.0, longitude: 0.0, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0, completion: {
+                    (_ mobileDevice) in
+                    if let md = mobileDevice{
+                        print(md.id)
+                        // Create a publication
+                        let properties = ["mood": "happy"]
+                        let topic = "tutorial"
+                        let range = 1000.0
+                        let duration = 300.0
+
+                        self.appDelegate.alps.createPublication(topic: topic, range: range, duration: duration, properties: properties, completion: {
+                            (_ publication) in
+                            if let p = publication {
+                                print(p.id)
+                            }
+                        })
+
+                        // Create a subscription
+                        let selector = "mood = 'happy'"
+                        self.appDelegate.alps.createSubscription(topic: topic, selector: selector, range: range, duration: duration, completion: {
+                            (_ subscription) in
+                            if let s = subscription {
+                                print(s.id)
+                            }
+                        })
+
+                        // Get the matches
+                        self.appDelegate.alps.startUpdatingLocation()
+                        self.appDelegate.alps.startMonitoringMatches()
+                        // onMatch function is called everytime a match occurs.
+                        self.appDelegate.alps.onMatch(completion: {
+                            (_ match) in
+                            print("-------------- ON MATCH ----------------")
+                            print(match.id)
+                        })
+                    }
+                })
+            }
+        })
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+```
 
 ## Documentation
 
@@ -193,8 +323,4 @@ See the [http://dev.matchmore.com/documentation/api](http://dev.matchmore.com/do
 ## Author
 
 rk, rafal.kowalski@mac.com
-
-
-## License
-
-Alps is available under the MIT license. See the LICENSE file for more info.
+jdu, jean-marc.du@matchmore.com
