@@ -34,17 +34,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84D0A5671F73F1D700CE0923 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D0A5671F73F1D700CE0923 /* alps-ios-tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alps-ios-tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D0A56A1F73F1D700CE0923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D0A56C1F73F1D700CE0923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84D0A56F1F73F1D700CE0923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D0A5711F73F1D700CE0923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D0A5741F73F1D700CE0923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D0A5761F73F1D700CE0923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D0A57B1F73F1D700CE0923 /* TutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D0A57B1F73F1D700CE0923 /* alps-ios-tutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alps-ios-tutorialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D0A57F1F73F1D700CE0923 /* TutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTests.swift; sourceTree = "<group>"; };
 		84D0A5811F73F1D700CE0923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D0A5861F73F1D700CE0923 /* TutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D0A5861F73F1D700CE0923 /* alps-ios-tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alps-ios-tutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D0A58A1F73F1D700CE0923 /* TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialUITests.swift; sourceTree = "<group>"; };
 		84D0A58C1F73F1D700CE0923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,9 +87,9 @@
 		84D0A5681F73F1D700CE0923 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84D0A5671F73F1D700CE0923 /* Tutorial.app */,
-				84D0A57B1F73F1D700CE0923 /* TutorialTests.xctest */,
-				84D0A5861F73F1D700CE0923 /* TutorialUITests.xctest */,
+				84D0A5671F73F1D700CE0923 /* alps-ios-tutorial.app */,
+				84D0A57B1F73F1D700CE0923 /* alps-ios-tutorialTests.xctest */,
+				84D0A5861F73F1D700CE0923 /* alps-ios-tutorialUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84D0A5661F73F1D700CE0923 /* Tutorial */ = {
+		84D0A5661F73F1D700CE0923 /* alps-ios-tutorial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84D0A58F1F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "Tutorial" */;
+			buildConfigurationList = 84D0A58F1F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "alps-ios-tutorial" */;
 			buildPhases = (
 				84D0A5631F73F1D700CE0923 /* Sources */,
 				84D0A5641F73F1D700CE0923 /* Frameworks */,
@@ -140,14 +140,14 @@
 			);
 			dependencies = (
 			);
-			name = Tutorial;
+			name = "alps-ios-tutorial";
 			productName = Tutorial;
-			productReference = 84D0A5671F73F1D700CE0923 /* Tutorial.app */;
+			productReference = 84D0A5671F73F1D700CE0923 /* alps-ios-tutorial.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84D0A57A1F73F1D700CE0923 /* TutorialTests */ = {
+		84D0A57A1F73F1D700CE0923 /* alps-ios-tutorialTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84D0A5921F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "TutorialTests" */;
+			buildConfigurationList = 84D0A5921F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "alps-ios-tutorialTests" */;
 			buildPhases = (
 				84D0A5771F73F1D700CE0923 /* Sources */,
 				84D0A5781F73F1D700CE0923 /* Frameworks */,
@@ -158,14 +158,14 @@
 			dependencies = (
 				84D0A57D1F73F1D700CE0923 /* PBXTargetDependency */,
 			);
-			name = TutorialTests;
+			name = "alps-ios-tutorialTests";
 			productName = TutorialTests;
-			productReference = 84D0A57B1F73F1D700CE0923 /* TutorialTests.xctest */;
+			productReference = 84D0A57B1F73F1D700CE0923 /* alps-ios-tutorialTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		84D0A5851F73F1D700CE0923 /* TutorialUITests */ = {
+		84D0A5851F73F1D700CE0923 /* alps-ios-tutorialUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84D0A5951F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "TutorialUITests" */;
+			buildConfigurationList = 84D0A5951F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "alps-ios-tutorialUITests" */;
 			buildPhases = (
 				84D0A5821F73F1D700CE0923 /* Sources */,
 				84D0A5831F73F1D700CE0923 /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				84D0A5881F73F1D700CE0923 /* PBXTargetDependency */,
 			);
-			name = TutorialUITests;
+			name = "alps-ios-tutorialUITests";
 			productName = TutorialUITests;
-			productReference = 84D0A5861F73F1D700CE0923 /* TutorialUITests.xctest */;
+			productReference = 84D0A5861F73F1D700CE0923 /* alps-ios-tutorialUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84D0A5621F73F1D700CE0923 /* Build configuration list for PBXProject "Tutorial" */;
+			buildConfigurationList = 84D0A5621F73F1D700CE0923 /* Build configuration list for PBXProject "alps-ios-tutorial" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84D0A5661F73F1D700CE0923 /* Tutorial */,
-				84D0A57A1F73F1D700CE0923 /* TutorialTests */,
-				84D0A5851F73F1D700CE0923 /* TutorialUITests */,
+				84D0A5661F73F1D700CE0923 /* alps-ios-tutorial */,
+				84D0A57A1F73F1D700CE0923 /* alps-ios-tutorialTests */,
+				84D0A5851F73F1D700CE0923 /* alps-ios-tutorialUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,12 +288,12 @@
 /* Begin PBXTargetDependency section */
 		84D0A57D1F73F1D700CE0923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84D0A5661F73F1D700CE0923 /* Tutorial */;
+			target = 84D0A5661F73F1D700CE0923 /* alps-ios-tutorial */;
 			targetProxy = 84D0A57C1F73F1D700CE0923 /* PBXContainerItemProxy */;
 		};
 		84D0A5881F73F1D700CE0923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84D0A5661F73F1D700CE0923 /* Tutorial */;
+			target = 84D0A5661F73F1D700CE0923 /* alps-ios-tutorial */;
 			targetProxy = 84D0A5871F73F1D700CE0923 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KFM.TutorialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tutorial.app/Tutorial";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alps-ios-tutorial.app/alps-ios-tutorial";
 			};
 			name = Debug;
 		};
@@ -465,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KFM.TutorialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tutorial.app/Tutorial";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alps-ios-tutorial.app/alps-ios-tutorial";
 			};
 			name = Release;
 		};
@@ -500,7 +500,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84D0A5621F73F1D700CE0923 /* Build configuration list for PBXProject "Tutorial" */ = {
+		84D0A5621F73F1D700CE0923 /* Build configuration list for PBXProject "alps-ios-tutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84D0A58D1F73F1D700CE0923 /* Debug */,
@@ -509,29 +509,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84D0A58F1F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "Tutorial" */ = {
+		84D0A58F1F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "alps-ios-tutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84D0A5901F73F1D700CE0923 /* Debug */,
 				84D0A5911F73F1D700CE0923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		84D0A5921F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "TutorialTests" */ = {
+		84D0A5921F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "alps-ios-tutorialTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84D0A5931F73F1D700CE0923 /* Debug */,
 				84D0A5941F73F1D700CE0923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		84D0A5951F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "TutorialUITests" */ = {
+		84D0A5951F73F1D700CE0923 /* Build configuration list for PBXNativeTarget "alps-ios-tutorialUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84D0A5961F73F1D700CE0923 /* Debug */,
 				84D0A5971F73F1D700CE0923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

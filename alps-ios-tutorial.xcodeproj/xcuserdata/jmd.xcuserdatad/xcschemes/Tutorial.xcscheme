@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84D0A5661F73F1D700CE0923"
-               BuildableName = "Tutorial.app"
-               BlueprintName = "Tutorial"
-               ReferencedContainer = "container:Tutorial.xcodeproj">
+               BuildableName = "alps-ios-tutorial.app"
+               BlueprintName = "alps-ios-tutorial"
+               ReferencedContainer = "container:alps-ios-tutorial.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84D0A57A1F73F1D700CE0923"
-               BuildableName = "TutorialTests.xctest"
-               BlueprintName = "TutorialTests"
-               ReferencedContainer = "container:Tutorial.xcodeproj">
+               BuildableName = "alps-ios-tutorialTests.xctest"
+               BlueprintName = "alps-ios-tutorialTests"
+               ReferencedContainer = "container:alps-ios-tutorial.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84D0A5851F73F1D700CE0923"
-               BuildableName = "TutorialUITests.xctest"
-               BlueprintName = "TutorialUITests"
-               ReferencedContainer = "container:Tutorial.xcodeproj">
+               BuildableName = "alps-ios-tutorialUITests.xctest"
+               BlueprintName = "alps-ios-tutorialUITests"
+               ReferencedContainer = "container:alps-ios-tutorial.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84D0A5661F73F1D700CE0923"
-            BuildableName = "Tutorial.app"
-            BlueprintName = "Tutorial"
-            ReferencedContainer = "container:Tutorial.xcodeproj">
+            BuildableName = "alps-ios-tutorial.app"
+            BlueprintName = "alps-ios-tutorial"
+            ReferencedContainer = "container:alps-ios-tutorial.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84D0A5661F73F1D700CE0923"
-            BuildableName = "Tutorial.app"
-            BlueprintName = "Tutorial"
-            ReferencedContainer = "container:Tutorial.xcodeproj">
+            BuildableName = "alps-ios-tutorial.app"
+            BlueprintName = "alps-ios-tutorial"
+            ReferencedContainer = "container:alps-ios-tutorial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84D0A5661F73F1D700CE0923"
-            BuildableName = "Tutorial.app"
-            BlueprintName = "Tutorial"
-            ReferencedContainer = "container:Tutorial.xcodeproj">
+            BuildableName = "alps-ios-tutorial.app"
+            BlueprintName = "alps-ios-tutorial"
+            ReferencedContainer = "container:alps-ios-tutorial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
