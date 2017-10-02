@@ -101,9 +101,9 @@ First, go to your file `ViewController`.
 
 Add this line in class ViewController, to get a reference to the application's delegate :
 
-`let appDelegate = UIApplication.shared.delegate as! AppDelegate`
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-Inside of function `ViewDidLoad()``
+Inside of function `ViewDidLoad()`
 * Use the constant appDelegate to get a reference to **AlpsManager**.
 * Call the function `createUser(username: String, completion : (User?) -> Void)`. Fill the required parameters and you can use the completion to get the returned `User` object created in our cloud service.
 * Use the completion to get the user and print his id.
@@ -237,7 +237,7 @@ let selector = "mood = 'happy'"
 * Use the constant appDelegate to get the AlpsManager.
 * Call the function `startUpdatingLocation()`, to update location to our cloud service.
 * Call the function `startMonitoringMatches()`, to start matches monitoring.
-* Use the function `onMatch()`` and the completion to get the match and print his id.
+* Use the function `onMatch()` and the completion to get the match and print his id.
 
 ```swift
 override func viewDidLoad() {
