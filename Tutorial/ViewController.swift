@@ -20,11 +20,13 @@ class ViewController: UIViewController {
         // Create a User
         appDelegate.alps.createUser("Alice", completion: {(_ user) in
             if let u = user {
+                print("------- USER ID --------")
                 print(u.id)
                 // Create a MobileDevice
                 self.appDelegate.alps.createMobileDevice(name: "Alice's mobile device", platform: "iOS 9.0", deviceToken: "personnalUUID", latitude: 0.0, longitude: 0.0, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0, completion: {
                     (_ mobileDevice) in
                     if let md = mobileDevice{
+                        print("------- MOBILE DEVICE ID --------")
                         print(md.id)
                         // Create a publication
                         let properties = ["mood": "happy"]
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
                         self.appDelegate.alps.createPublication(topic: topic, range: range, duration: duration, properties: properties, completion: {
                             (_ publication) in
                             if let p = publication {
+                                print("------- PUBLICATION ID --------")
                                 print(p.id)
                             }
                         })
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
                         self.appDelegate.alps.createSubscription(topic: topic, selector: selector, range: range, duration: duration, completion: {
                             (_ subscription) in
                             if let s = subscription {
+                                print("------- SUBSCRIPTION ID --------")
                                 print(s.id)
                             }
                         })
@@ -54,8 +58,12 @@ class ViewController: UIViewController {
                         // onMatch function is called everytime a match occurs.
                         self.appDelegate.alps.onMatch(completion: {
                             (_ match) in
-                            print("-------------- ON MATCH ----------------")
+                            print("------- ON MATCH --------")
                             print(match.id)
+                            print("MATCHING : Publication id : ")
+                            print(match.publication?.id)
+                            print("with : Subscription id : ")
+                            print(match.subscription?.id)
                         })
                     }
                 })

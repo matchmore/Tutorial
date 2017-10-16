@@ -6,30 +6,20 @@ PODS:
     - Alps
 
 DEPENDENCIES:
-  - Alps (from `https://github.com/MatchMore/alps-ios-api.git`, tag `0.4.0`)
-  - AlpsSDK (from `https://github.com/MatchMore/alps-ios-sdk.git`, tag `0.4.1`)
+  - Alps (from `../alps-ios-api`)
+  - AlpsSDK (from `../alps-ios-sdk`)
 
 EXTERNAL SOURCES:
   Alps:
-    :git: https://github.com/MatchMore/alps-ios-api.git
-    :tag: 0.4.0
+    :path: ../alps-ios-api
   AlpsSDK:
-    :git: https://github.com/MatchMore/alps-ios-sdk.git
-    :tag: 0.4.1
-
-CHECKOUT OPTIONS:
-  Alps:
-    :git: https://github.com/MatchMore/alps-ios-api.git
-    :tag: 0.4.0
-  AlpsSDK:
-    :git: https://github.com/MatchMore/alps-ios-sdk.git
-    :tag: 0.4.1
+    :path: ../alps-ios-sdk
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Alps: f97f116e679df08d4fba32730479e2f351afb258
   AlpsSDK: a60836dcaa6599d4dbba3aa5ce56ed95bb5220ca
 
-PODFILE CHECKSUM: b3545945d01fbc827cabc8494c91889bdfb4e2ea
+PODFILE CHECKSUM: 515e463d74d3b5429f7b8ed3a6fc1faab8675dd9
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

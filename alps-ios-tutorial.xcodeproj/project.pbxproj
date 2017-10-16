@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		844087D51F9145380012192A /* alps-ios-tutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alps-ios-tutorial.entitlements"; sourceTree = "<group>"; };
 		84D0A5671F73F1D700CE0923 /* alps-ios-tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alps-ios-tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D0A56A1F73F1D700CE0923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D0A56C1F73F1D700CE0923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		84D0A55E1F73F1D700CE0923 = {
 			isa = PBXGroup;
 			children = (
+				844087D51F9145380012192A /* alps-ios-tutorial.entitlements */,
 				84D0A5691F73F1D700CE0923 /* Tutorial */,
 				84D0A57E1F73F1D700CE0923 /* TutorialTests */,
 				84D0A5891F73F1D700CE0923 /* TutorialUITests */,
@@ -193,8 +195,13 @@
 				TargetAttributes = {
 					84D0A5661F73F1D700CE0923 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2UJM6Q65K9;
+						DevelopmentTeam = PAYVP3AFKX;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					84D0A57A1F73F1D700CE0923 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -417,10 +424,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2UJM6Q65K9;
+				CODE_SIGN_ENTITLEMENTS = "alps-ios-tutorial.entitlements";
+				DEVELOPMENT_TEAM = PAYVP3AFKX;
 				INFOPLIST_FILE = Tutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KFM.Tutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = MM.tutorial.apns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -430,10 +438,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2UJM6Q65K9;
+				CODE_SIGN_ENTITLEMENTS = "alps-ios-tutorial.entitlements";
+				DEVELOPMENT_TEAM = PAYVP3AFKX;
 				INFOPLIST_FILE = Tutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KFM.Tutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = MM.tutorial.apns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
